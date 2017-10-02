@@ -12,10 +12,10 @@ This code is a revised version of the core algorithm used in [3], where it was c
 
 ## Prerequisites 
 The goal was to make the code as light as possible, so only the following packages are required
-* numpy
-* pandas
-* scipy
-* stl
+* [NumPy](http://www.numpy.org) 
+* [pandas] (http://pandas.pydata.org)
+* [SciPy] (https://www.scipy.org)
+* [numpy-stl] (https://pypi.python.org/pypi/numpy-stl) - used to generate an stl file of the generated 3D model.
 
 ## Usage
 
