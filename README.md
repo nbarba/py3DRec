@@ -23,8 +23,8 @@ The goal was to make the code as light as possible, so only the following packag
 
 
 ## References
-[1] M. Pollefeys, R. Koch and L. Van Gool, “Self-Calibration and Metric Reconstruction in spite of Varying and Unknown Internal Camera Parameters”, Proc. International Conference on Computer Vision, Narosa Publishing House, pp.90-95, 1998
+[1]   M. Pollefeys, R. Koch and L. Van Gool, “Self-Calibration and Metric Reconstruction in spite of Varying and Unknown Internal Camera Parameters”, Proc. International Conference on Computer Vision, Narosa Publishing House, pp.90-95, 1998
 
-[2] A. Zisserman R. Hartley. Multiple View Geometry in Computer Vision. Cambridge University Press, 2003.
+[2]   A. Zisserman R. Hartley. Multiple View Geometry in Computer Vision. Cambridge University Press, 2003.
 
-[3] N.Barbalios, N.Nikolaidis and I.Pitas, "3D Human Face Modelling >From Uncalibrated Images Using Spline Based Deformation" in 3rd International Conference on Computer Vision Theory and Applications (VISAPP 2008), Funchal Madeira, Portugal, January, 2008.
+[3]   N.Barbalios, N.Nikolaidis and I.Pitas, "3D Human Face Modelling >From Uncalibrated Images Using Spline Based Deformation" in 3rd International Conference on Computer Vision Theory and Applications (VISAPP 2008), Funchal Madeira, Portugal, January, 2008.
