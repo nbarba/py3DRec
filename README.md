@@ -9,7 +9,7 @@ A 3D modeling from uncalibrated images algorithm implementation. The algorithm t
 
 
 
-#Prerequisites#
+# Prerequisites 
 The goal was to make the code as light as possible, so only the following packages are required
 * numpy
 * pandas
