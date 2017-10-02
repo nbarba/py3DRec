@@ -15,11 +15,19 @@ The goal was to make the code as light as possible, so only the following packag
 * [NumPy](http://www.numpy.org)
 * [pandas](http://pandas.pydata.org) 
 * [SciPy](https://www.scipy.org) 
-* [numpy-stl](https://pypi.python.org/pypi/numpy-stl) - used to generate an stl file of the generated 3D model.
-
-## Usage
+* [numpy-stl](https://pypi.python.org/pypi/numpy-stl)
 
 ## Example
+A toy-example is provided in the examples folder. It is a sequence of pictures of a poster on a wall (3 images). The 2D features were automatically selected using the SIFT algorithm, and are given in a txt file that has the following format: 
+| x coordinated | y coordinates | feature id  | image id |.
+
+To run the example, use the following command: 
+```
+python unalibrated_rec.py --input_file=./example/features_poster.txt
+```
+After the algorithm is executed, two files should be generated: 
+* rec_model_cloud.txt : contains the 3D homogeneous coordinates of the reconstructed model.
+* reconstructed_model.stl: an stl file of the reconstructed 3D model
 
 
 ## References
