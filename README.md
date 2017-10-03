@@ -1,6 +1,6 @@
 # py3DRec
 
-This repository contains a revised implementation of the structure from motion algorithm used in [Barbalios et al., "3D Human Face Modelling From Uncalibrated Images Using Spline Based Deformation", VISSAP 2008](http://poseidon.csd.auth.gr/papers/PUBLISHED/CONFERENCE/pdf/VISAPP_final.pdf). Given at least three views of an object, and identified feature points across these views, the algorithm generates a reconstruction of the objet in 3D.
+This repository contains a revised implementation of the structure from motion algorithm used in [Barbalios et al., "3D Human Face Modelling From Uncalibrated Images Using Spline Based Deformation", VISSAP 2008](http://poseidon.csd.auth.gr/papers/PUBLISHED/CONFERENCE/pdf/VISAPP_final.pdf). Given at least three views of an object, and identified feature points across these views, the algorithm generates a 3D reconstruction of the object.
 
 
 ## Overview
