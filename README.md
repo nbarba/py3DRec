@@ -54,3 +54,9 @@ After the algorithm is executed, two files should be generated:
 [2]   A. Zisserman R. Hartley. Multiple View Geometry in Computer Vision. Cambridge University Press, 2003.
 
 [3]   N.Barbalios, N.Nikolaidis and I.Pitas, "3D Human Face Modelling >From Uncalibrated Images Using Spline Based Deformation" in 3rd International Conference on Computer Vision Theory and Applications (VISAPP 2008), Funchal Madeira, Portugal, January, 2008.
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
