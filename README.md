@@ -26,13 +26,13 @@ The code consists of four classes, each one designed for a specific task:
 * ImageSequence: holds all the image sequence related stuff, like sequence length, width and height of each image, 2D feature coordinates across all images. It also contains a method (i.e. show()), to visualize the image sequence with the 2D features highlighted. 
 * EpipolarGeometry: implements epipolar geometry related operations, such as computing the fundamental matrix, finding the epipoles, triangulation, computing homographies, and the reprojection error for one or multiple views.
 * UncalibratedReconstruction: the main class that implements the 3D modeling algorithm. Constructor arguments include: 
-** sequence length: the length of the image sequence
-** width: the width of images in the sequence
-** length: the length of the images in the sequence
-** triang_method: triangulation method (0: standard triangulation, 1: polynomial triangulation)
-** opt_triang: optimize triangulation result (i.e. 3D points)
-** opt_f: optimize fundamental matrix estimation
-** self_foc: for self-calibration, defines the type of focal length expected across views (0: fixed, 1: varying)
+  * sequence length: the length of the image sequence
+  * width: the width of images in the sequence
+  * length: the length of the images in the sequence
+  * triang_method: triangulation method (0: standard triangulation, 1: polynomial triangulation)
+  * opt_triang: optimize triangulation result (i.e. 3D points)
+  * opt_f: optimize fundamental matrix estimation
+  * self_foc: for self-calibration, defines the type of focal length expected across views (0: fixed, 1: varying)
 * RecModel: holds the result of the reconstruction, i.e. projection matrices, rotation matrices, translation vectors, camera intrisic parameters vectors and the 3D structure point coordinates. It also contains a method, named export_stl_file, that performs Delaunay triangulation and saves the result in stl format. 
 
 ## Example
