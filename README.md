@@ -9,7 +9,7 @@ A 3D modeling algorithm implementation for generating 3D models from 2D images. 
 
 Take a look at [1,2,3] for more details into 3D modeling. This repository contains a revised version of the source code for the paper [3], where it was coupled with a generic face model to transform the 3D structure into the Euclidean space for face modeling purposes.
 
-![Overview](./imgs/demo.png)
+![Overview](./img/demo.png)
 
 ## Prerequisites 
 The following python packages are required to run the projet: 
