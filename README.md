@@ -1,6 +1,6 @@
 # py3DRec
 A 3D modeling algorithm implementation for generating 3D models from 2D images. The algorithm takes a series of features (i.e. 2D coordinates), tracked through a sequence of images (i.e. taken with a common handheld camera), and returns the 3D coordinates of these features in the metric space. To make this happen, the algorithm consists of the following steps: 
-* Selecting two views(images), e.g. i-th and j-th view, the fundamental matrix and the epipoles are computed from the corresponding 2D features of the i-th and j-th view. For best results, the fartherst views in the sequence are selected.
+* Selecting two views (images), e.g. i-th and j-th view, the fundamental matrix and the epipoles are computed from the corresponding 2D features of the i-th and j-th view. For best results, the fartherst views in the sequence are selected.
 * Estimating the projection matrices for the i-th and j-th view. To do so, the i-th view is assumed to be aligned with the world frame, and the projection matrix for the j-th view can be deduced using the fundamental matrix, the epipole and the reference frame of the reconstruction.
 * Triangulation of the 2D features of the i-th and j-th views to get an initial estimate of the 3D structure. 
 * Estimating the projection matrices for all the remaining views, using the 3D points we got from triangulation.
@@ -25,7 +25,7 @@ The following python packages are required to run the projet:
 The code consists of four classes, each one designed for a specific task: 
 * __ImageSequence:__ holds all the image sequence related stuff, like sequence length, width and height of each image, 2D feature coordinates across all images. It also contains a method (i.e. show()), to visualize the image sequence with the 2D features highlighted. 
 * __EpipolarGeometry:__ implements epipolar geometry related operations, such as computing the fundamental matrix, finding the epipoles, triangulation, computing homographies, and the reprojection error for one or multiple views.
-* UncalibratedReconstruction: the main class that implements the 3D modeling algorithm. Constructor arguments include: 
+* __UncalibratedReconstruction:__ the main class that implements the 3D modeling algorithm. Constructor arguments include: 
   * _sequence length:_ the length of the image sequence
   * _width:_ the width of images in the sequence
   * _length:_ the length of the images in the sequence
