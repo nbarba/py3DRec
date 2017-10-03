@@ -41,10 +41,12 @@ A toy-example is provided in the examples folder. It is a sequence of pictures o
 
 To run the example, use the following command: 
 ```
-python unalibrated_rec.py --input_file=./example/features_poster.txt
+python unalibrated_rec.py --input_file=./example/features_poster.txt --show
 ```
+The first argument (i.e. --input_file) defines the txt file with the features, the second flag (--show) displays the image sequence together with the 2D features (remove this argument to not show the sequence). 
+
 After the algorithm is executed, two files should be generated: 
-* rec_model_cloud.txt : contains the 3D homogeneous coordinates of the reconstructed model.
+* rec_model_cloud.txt : contains the 3D homogeneous coordinates of the reconstructed 3D model.
 * reconstructed_model.stl: an stl file of the reconstructed 3D model
 
 
