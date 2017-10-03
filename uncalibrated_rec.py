@@ -468,7 +468,6 @@ if __name__ == "__main__":
 	parser = argparse.ArgumentParser(description='3D Reconstruction from uncalibrated images')
 	parser.add_argument('--input_file', metavar='path', required=True, help='Input file containing image point correspondences')
 	parser.add_argument('--show', required=False, action="store_true",help="Display the image sequence with the 2D features")
-	#parser.add_argument('--no-show', dest='show', action='store_false')
 	args = parser.parse_args()
 	main(input_file=args.input_file,show=args.show)
 
