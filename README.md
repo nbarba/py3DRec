@@ -7,8 +7,9 @@ A 3D modeling algorithm implementation for generating 3D models from 2D images. 
 * Bundle adjustment, i.e. an overall optimization to refine the 3D points and the projection matrices by minimizing the reprojection error of the 3D points back to each view. 
 * Self-calibration to estimate the camera intrisic parameters for each view, and transform the 3D structure from the projective to metric space. 
 
-Take a look at [1,2,3] for more details into 3D modeling. The code here is a revised version of the core algorithm used in [3], where it was coupled with a generic face model to transform the 3D structure into the Euclidean space for face modeling purposes.
+Take a look at [1,2,3] for more details into 3D modeling. This repository contains a revised version of the source code for the paper [3], where it was coupled with a generic face model to transform the 3D structure into the Euclidean space for face modeling purposes.
 
+![Overview](imgs/demo.png)
 
 ## Prerequisites 
 The following python packages are required to run the projet: 
