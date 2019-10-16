@@ -327,7 +327,7 @@ class UncalibratedReconstruction:
 
 		else: 
 			#optimize for varying focal lenghts (to do)
-			print "not yet supported"
+			print("not yet supported")
 
 		return Tm,K,error
 
@@ -395,10 +395,10 @@ class UncalibratedReconstruction:
 
 
 def main(input_file,show):
-	print "--------------------------------"
-	print " Uncalibrated 3D Reconstruction "
-	print ""
-	print "--------------------------------"
+	print("--------------------------------")
+	print(" Uncalibrated 3D Reconstruction ")
+	print("")
+	print("--------------------------------")
 
 	sequence=ImageSequence(input_file);
 
@@ -408,24 +408,24 @@ def main(input_file,show):
 	#normalize coordinates
 	norm_feat_2d=sequence.get_normalized_coordinates()
 
-	print "> Estimating fundamental matrix...."
+	print("> Estimating fundamental matrix....")
 	F,epipole_1,epipole_2=rec_engine.two_view_geometry_computation(norm_feat_2d[0],norm_feat_2d[1])
 
 
-	print "> Computing reference plane...." 
+	print("> Computing reference plane....")
 	# Step 2: compute the reconstruction reference plane using the epipole in the second image
 	p, H = rec_engine.compute_reference_frame(epipole_2,F)
 
 
-	print "> Estimating projection matrices for first two views...." 
+	print("> Estimating projection matrices for first two views....")
 	# Step 3: Estimate projection matrices for the first two views
 	P = rec_engine.estimate_initial_projection_matrices(H,epipole_2,p)
 
-	print "> 3D point estimate triangulation...." 
+	print("> 3D point estimate triangulation....")
 	# Step 4: triangulate points to get an initial estimate of the 3D point cloud
 	feat3D=rec_engine.get_initial_structure(norm_feat_2d,P,epipole_1,epipole_2,F)
 
-	print "> Estimating projection matrices for additional views...." 
+	print("> Estimating projection matrices for additional views....")
 	# Step 5: Use the 3D point estimates to estimate the projection matrices of the remaining views 
 	P=rec_engine.projective_pose_estimation(norm_feat_2d,P,feat3D)
 
@@ -433,19 +433,19 @@ def main(input_file,show):
 	print("> Bundle Adjustment....")
 	# Step 5: Optimize 3D points and projection matrices using the reprojection error
 	P,feat3D,error=rec_engine.bundle_adjustment(norm_feat_2d,P,feat3D)
-	print "  - Bundle adjustment error: ",error
+	print("  - Bundle adjustment error: ",error)
 
 
 	print("> Self-calibration")
 	# Step 6: Self-calibration
 	Tm,K,error=rec_engine.self_calibration(P)
-	print "  - Self-calibration error: ",error
-	print "  - Tranformation Matrix (Projective -> Metric): "
+	print("  - Self-calibration error: ",error)
+	print("  - Tranformation Matrix (Projective -> Metric): ")
 
-	print "> Converting to metric space" 
+	print("> Converting to metric space")
 	metric_feat3D,metric_P=rec_engine.convert_to_metric_space(Tm,feat3D,P,K)
 
-	print "> Saving model..." 
+	print("> Saving model...")
 
 	recModel=RecModel();
 	recModel.P=P
@@ -453,15 +453,15 @@ def main(input_file,show):
 	recModel.Tm=Tm
 
 	np.savetxt('rec_model_cloud.txt',metric_feat3D,delimiter=',')
-	print "	 - 3D point cloud saved in rec_model_cloud.txt "
+	print("	 - 3D point cloud saved in rec_model_cloud.txt ")
 
 	recModel.export_stl_file('reconstructed_model.stl')
-	print "  - STL model saved in reconstructed_model.stl"
+	print("  - STL model saved in reconstructed_model.stl")
 
 	if (show==True):
 		sequence.show()
 
-	print "> 3D reconstruction completed in ",round(time.time() - start_time, 1)," sec!" 
+	print("> 3D reconstruction completed in " + str(round(time.time() - start_time, 1)) + " sec!")
 
 
 if __name__ == "__main__":
