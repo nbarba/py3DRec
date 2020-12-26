@@ -49,7 +49,7 @@ A toy-example is provided in the examples folder. It is a sequence of pictures o
 
 To run the example, use the following command: 
 ```
-python unalibrated_rec.py --input_file=./example/features_poster.txt --show
+python uncalibrated_rec.py --input_file=./example/features_poster.txt --show
 ```
 The first argument (i.e. --input_file) defines the txt file with the features, the second flag (--show) displays the image sequence together with the 2D features (remove this argument to not show the sequence). 
 
