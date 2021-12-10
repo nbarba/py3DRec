@@ -45,7 +45,7 @@ The code consists of four classes, each one designed for a specific task:
 
 ## Example
 A toy-example is provided in the examples folder. It is a sequence of pictures of a poster on a wall (3 images). The 2D features were automatically selected using the SIFT algorithm, and are given in a txt file that has the following format: 
-| x coordinated | y coordinates | feature id  | image id |.
+| x coordinates | y coordinates | feature id  | image id |.
 
 To run the example, use the following command: 
 ```
